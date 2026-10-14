@@ -1,0 +1,146 @@
+:root {
+  --text: #1f2328;
+  --muted: #656d76;
+  --border: #d0d7de;
+  --row-hover: #f6f8fa;
+  --link: #0969da;
+  --error: #cf222e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 0 0 16px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+
+/* Toolbar and search */
+
+.toolbar {
+  margin-bottom: 12px;
+}
+
+.search input {
+  width: 100%;
+  padding: 8px 10px;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.status .warning {
+  color: var(--error);
+  font-weight: normal;
+}
+
+.file-table td.location {
+  color: var(--muted);
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+  .breadcrumbs .separator {
+    color: var(--muted);
+  }
+
+/* Stats and status messages */
+
+.stats,
+.status {
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+  .status.error {
+    color: var(--error);
+  }
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* File table */
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+  .file-table th,
+  .file-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+    .file-table td.name {
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    .file-table th.size,
+    .file-table td.size {
+      text-align: right;
+    }
+
+  .file-table tbody tr:hover {
+    background: var(--row-hover);
+  }
+
+/* Upload button */
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+}
+
+  .toolbar .search {
+    flex: 1;
+  }
+
+button {
+  padding: 8px 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--row-hover);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+  button:hover {
+    border-color: var(--muted);
+  }
+
+.file-table .actions {
+  display: flex;
+  gap: 12px;
+}
