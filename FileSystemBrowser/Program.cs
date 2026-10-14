@@ -29,10 +29,6 @@ namespace FileSystemBrowser
       builder.Services.AddSingleton<IFileSystemService, FileSystemService>();
 
 
-
-
-
-
       var app = builder.Build();
 
       // Configure the HTTP request pipeline.
